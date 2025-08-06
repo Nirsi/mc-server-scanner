@@ -1,0 +1,26 @@
+{
+  "name": "mc-server-scanner",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "bun run index.ts",
+    "dev": "bun run index.ts --concurrency 100 --timeout 5000",
+    "scan": "bun run src/app.ts",
+    "test": "bun run examples/database-test.ts",
+    "test:performance": "bun run examples/database-test.ts --performance",
+    "test:errors": "bun run examples/database-test.ts --errors",
+    "test:all": "bun run examples/database-test.ts --all",
+    "example": "bun run examples/basic-scan.ts",
+    "example:custom": "bun run examples/basic-scan.ts --custom-range",
+    "example:db": "bun run examples/simple-database-usage.ts",
+    "example:db-all": "bun run examples/simple-database-usage.ts --all",
+    "help": "bun run index.ts --help"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
